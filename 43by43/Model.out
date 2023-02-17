@@ -1,0 +1,242 @@
+0: gpu035.ihep.ac.cn
+GPU 0: Tesla V100-SXM2-32GB (UUID: GPU-8ac19b97-e996-d56f-26ed-caea68e1fcfc)
+GPU 1: Tesla V100-SXM2-32GB (UUID: GPU-b4b69832-6c89-62ee-f070-30f42461be6c)
+GPU 2: Tesla V100-SXM2-32GB (UUID: GPU-5e7442b9-f740-297b-760f-2bdcf87af670)
+Allocate GPU cards : 0,1,2
+
+modinfo:
+filename:       /lib/modules/3.10.0-1127.8.2.el7.x86_64/extra/nvidia.ko.xz
+alias:          char-major-195-*
+version:        450.36.06
+supported:      external
+license:        NVIDIA
+retpoline:      Y
+rhelversion:    7.8
+srcversion:     BB5CB243542347D4EB0C79C
+alias:          pci:v000010DEd*sv*sd*bc03sc02i00*
+alias:          pci:v000010DEd*sv*sd*bc03sc00i00*
+depends:        
+vermagic:       3.10.0-1127.8.2.el7.x86_64 SMP mod_unload modversions 
+parm:           NvSwitchRegDwords:NvSwitch regkey (charp)
+parm:           NvSwitchBlacklist:NvSwitchBlacklist=uuid[,uuid...] (charp)
+parm:           NVreg_ResmanDebugLevel:int
+parm:           NVreg_RmLogonRC:int
+parm:           NVreg_ModifyDeviceFiles:int
+parm:           NVreg_DeviceFileUID:int
+parm:           NVreg_DeviceFileGID:int
+parm:           NVreg_DeviceFileMode:int
+parm:           NVreg_InitializeSystemMemoryAllocations:int
+parm:           NVreg_UsePageAttributeTable:int
+parm:           NVreg_MapRegistersEarly:int
+parm:           NVreg_RegisterForACPIEvents:int
+parm:           NVreg_EnablePCIeGen3:int
+parm:           NVreg_EnableMSI:int
+parm:           NVreg_TCEBypassMode:int
+parm:           NVreg_EnableStreamMemOPs:int
+parm:           NVreg_EnableBacklightHandler:int
+parm:           NVreg_RestrictProfilingToAdminUsers:int
+parm:           NVreg_PreserveVideoMemoryAllocations:int
+parm:           NVreg_DynamicPowerManagement:int
+parm:           NVreg_DynamicPowerManagementVideoMemoryThreshold:int
+parm:           NVreg_EnableUserNUMAManagement:int
+parm:           NVreg_MemoryPoolSize:int
+parm:           NVreg_KMallocHeapMaxSize:int
+parm:           NVreg_VMallocHeapMaxSize:int
+parm:           NVreg_IgnoreMMIOCheck:int
+parm:           NVreg_NvLinkDisable:int
+parm:           NVreg_EnablePCIERelaxedOrderingMode:int
+parm:           NVreg_RegisterPCIDriver:int
+parm:           NVreg_RegistryDwords:charp
+parm:           NVreg_RegistryDwordsPerDevice:charp
+parm:           NVreg_RmMsg:charp
+parm:           NVreg_GpuBlacklist:charp
+parm:           NVreg_TemporaryFilePath:charp
+parm:           NVreg_AssignGpus:charp
+
+nvidia-smi:
+Tue May 25 16:33:44 2021       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 450.36.06    Driver Version: 450.36.06    CUDA Version: 11.0     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  Tesla V100-SXM2...  On   | 00000000:16:00.0 Off |                    0 |
+| N/A   38C    P0    40W / 300W |      0MiB / 32510MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   1  Tesla V100-SXM2...  On   | 00000000:3A:00.0 Off |                    0 |
+| N/A   37C    P0    41W / 300W |      0MiB / 32510MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   2  Tesla V100-SXM2...  On   | 00000000:B2:00.0 Off |                    0 |
+| N/A   35C    P0    41W / 300W |      0MiB / 32510MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+
+nvcc --version:
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2020 NVIDIA Corporation
+Built on Wed_Jul_22_19:09:09_PDT_2020
+Cuda compilation tools, release 11.0, V11.0.221
+Build cuda_11.0_bu.TC445_37.28845127_0
+
+ torch version: 1.8.0+cu111
+
+ cuda version: 11.1
+
+ is cuda available: True
+
+ CUDNN VERSION: 8005
+
+ Number CUDA Devices: 3
+
+ CUDA Device Name: Tesla V100-SXM2-32GB
+
+ CUDA Device Total Memory [GB]: 34.089730048
+
+ Device capability: (7, 0) 
+
+ Cuda deviice: <torch.cuda.device object at 0x2aefce0db7c0> 
+
+ Is cuda initialized: True
+
+ CUDA_HOME: /hpcfs/bes/mlgpu/hoseinkk/cuda-11
+
+real	2m24.922s
+user	0m1.650s
+sys	0m4.161s
+
+
+
+
+ The graph ... 
+
+
+graph forming time: 0:00:30.783495
+Number of nodes: 1849
+Number of edges: 14534
+Average node degree: 7.86
+Contains isolated nodes: False
+Contains self-loops: False
+Is undirected: True
+contains self/isolated loop: False, False
+is coalesced: False
+number of features, per nodes, per edges: (1, 1, 0)
+x: tensor([[0.0000e+00],
+        [1.0000e+00],
+        [2.0000e+00],
+        ...,
+        [1.8460e+03],
+        [1.8470e+03],
+        [1.8480e+03]]) 
+ edge_index: tensor([[1605, 1687, 1365,  ..., 1602, 1729,  308],
+        [1649, 1688, 1408,  ..., 1644, 1685,  265]])
+
+real	0m55.938s
+user	0m4.025s
+sys	0m4.980s
+
+
+
+
+
+ Loading data ... 
+
+
+
+real	0m50.992s
+user	0m5.354s
+sys	0m11.951s
+Matplotlib created a temporary config/cache directory at /tmp/matplotlib-l8ggq818 because the default path (/afs/ihep.ac.cn/users/h/hoseinkk/.config/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+Matplotlib is building the font cache; this may take a moment.
+
+
+
+
+ The Network ... 
+
+
+
+
+
+
+ The graph ... 
+
+
+graph forming time: 0:00:08.518192
+Number of nodes: 1849
+Number of edges: 14534
+Average node degree: 7.86
+Contains isolated nodes: False
+Contains self-loops: False
+Is undirected: True
+contains self/isolated loop: False, False
+is coalesced: False
+number of features, per nodes, per edges: (1, 1, 0)
+x: tensor([[0.0000e+00],
+        [1.0000e+00],
+        [2.0000e+00],
+        ...,
+        [1.8460e+03],
+        [1.8470e+03],
+        [1.8480e+03]]) 
+ edge_index: tensor([[1605, 1687, 1365,  ..., 1602, 1729,  308],
+        [1649, 1688, 1408,  ..., 1644, 1685,  265]])
+
+
+
+
+
+ Loading data ... 
+
+
+Net(
+  (conv1): GCNConv(1, 256)
+  (conv2): GCNConv(256, 256)
+  (conv3): GCNConv(256, 128)
+  (conv4): GCNConv(128, 64)
+  (conv5): GCNConv(64, 32)
+  (conv6): GCNConv(32, 1)
+)
+
+Passing two sample data from the network before training 
+result1: tensor([[[0.5000],
+         [0.5000],
+         [0.5000],
+         ...,
+         [0.5000],
+         [0.5000],
+         [0.5000]],
+
+        [[0.5000],
+         [0.5000],
+         [0.5000],
+         ...,
+         [0.5000],
+         [0.5000],
+         [0.5000]]], device='cuda:0', dtype=torch.float64,
+       grad_fn=<SigmoidBackward>) 
+data1: Data(edge_index=[2, 14534], x=[2, 1849, 1]) torch.Size([2, 1849, 1]) 
+x.shape: torch.Size([1849, 1])
+tensor([[0.5000, 0.5000, 0.5000,  ..., 0.5000, 0.5000, 0.5000],
+        [0.5000, 0.5000, 0.4999,  ..., 0.5000, 0.5000, 0.5000],
+        [0.5000, 0.5000, 0.4999,  ..., 0.5000, 0.5000, 0.5000],
+        ...,
+        [0.5000, 0.5000, 0.5000,  ..., 0.5000, 0.5000, 0.5000],
+        [0.5000, 0.5000, 0.5000,  ..., 0.5000, 0.5000, 0.5000],
+        [0.5000, 0.5000, 0.5000,  ..., 0.5000, 0.5000, 0.5000]],
+       device='cuda:0', dtype=torch.float64, grad_fn=<ViewBackward>)
+
+real	1m52.567s
+user	0m8.152s
+sys	0m13.289s

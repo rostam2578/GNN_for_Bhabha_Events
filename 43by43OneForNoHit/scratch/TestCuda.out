@@ -1,0 +1,109 @@
+0: gpu022.ihep.ac.cn
+/var/spool/slurm/spool/job580085/slurm_script: line 44: slurmInfo: command not found
+/var/spool/slurm/spool/job580085/slurm_script: line 46: slurmInfo: command not found
+/var/spool/slurm/spool/job580085/slurm_script: line 48: slurmInfo: command not found
+/var/spool/slurm/spool/job580085/slurm_script: line 50: showAssoc: command not found
+/var/spool/slurm/spool/job580085/slurm_script: line 52: showAssoc: command not found
+/var/spool/slurm/spool/job580085/slurm_script: line 54: showAssoc: command not found
+GPU 0: Tesla V100-SXM2-32GB (UUID: GPU-2d2ba05b-c8ad-75e5-36d3-5eba3d274307)
+Allocate GPU cards : 0
+
+modinfo:
+filename:       /lib/modules/3.10.0-1127.8.2.el7.x86_64/extra/nvidia.ko.xz
+alias:          char-major-195-*
+version:        450.36.06
+supported:      external
+license:        NVIDIA
+retpoline:      Y
+rhelversion:    7.8
+srcversion:     BB5CB243542347D4EB0C79C
+alias:          pci:v000010DEd*sv*sd*bc03sc02i00*
+alias:          pci:v000010DEd*sv*sd*bc03sc00i00*
+depends:        
+vermagic:       3.10.0-1127.8.2.el7.x86_64 SMP mod_unload modversions 
+parm:           NvSwitchRegDwords:NvSwitch regkey (charp)
+parm:           NvSwitchBlacklist:NvSwitchBlacklist=uuid[,uuid...] (charp)
+parm:           NVreg_ResmanDebugLevel:int
+parm:           NVreg_RmLogonRC:int
+parm:           NVreg_ModifyDeviceFiles:int
+parm:           NVreg_DeviceFileUID:int
+parm:           NVreg_DeviceFileGID:int
+parm:           NVreg_DeviceFileMode:int
+parm:           NVreg_InitializeSystemMemoryAllocations:int
+parm:           NVreg_UsePageAttributeTable:int
+parm:           NVreg_MapRegistersEarly:int
+parm:           NVreg_RegisterForACPIEvents:int
+parm:           NVreg_EnablePCIeGen3:int
+parm:           NVreg_EnableMSI:int
+parm:           NVreg_TCEBypassMode:int
+parm:           NVreg_EnableStreamMemOPs:int
+parm:           NVreg_EnableBacklightHandler:int
+parm:           NVreg_RestrictProfilingToAdminUsers:int
+parm:           NVreg_PreserveVideoMemoryAllocations:int
+parm:           NVreg_DynamicPowerManagement:int
+parm:           NVreg_DynamicPowerManagementVideoMemoryThreshold:int
+parm:           NVreg_EnableUserNUMAManagement:int
+parm:           NVreg_MemoryPoolSize:int
+parm:           NVreg_KMallocHeapMaxSize:int
+parm:           NVreg_VMallocHeapMaxSize:int
+parm:           NVreg_IgnoreMMIOCheck:int
+parm:           NVreg_NvLinkDisable:int
+parm:           NVreg_EnablePCIERelaxedOrderingMode:int
+parm:           NVreg_RegisterPCIDriver:int
+parm:           NVreg_RegistryDwords:charp
+parm:           NVreg_RegistryDwordsPerDevice:charp
+parm:           NVreg_RmMsg:charp
+parm:           NVreg_GpuBlacklist:charp
+parm:           NVreg_TemporaryFilePath:charp
+parm:           NVreg_AssignGpus:charp
+
+nvidia-smi:
+Fri Jun  4 22:12:57 2021       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 450.36.06    Driver Version: 450.36.06    CUDA Version: 11.0     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  Tesla V100-SXM2...  On   | 00000000:1C:00.0 Off |                    0 |
+| N/A   43C    P0    45W / 300W |      0MiB / 32510MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+
+nvcc --version:
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2020 NVIDIA Corporation
+Built on Wed_Jul_22_19:09:09_PDT_2020
+Cuda compilation tools, release 11.0, V11.0.221
+Build cuda_11.0_bu.TC445_37.28845127_0
+
+ torch version: 1.8.0+cu111
+
+ cuda version: 11.1
+
+ is cuda available: True
+
+ CUDNN VERSION: 8005
+
+ Number CUDA Devices: 1
+
+ CUDA Device Name: Tesla V100-SXM2-32GB
+
+ CUDA Device Total Memory [GB]: 34.089730048
+
+ Device capability: (7, 0) 
+
+ Cuda deviice: <torch.cuda.device object at 0x2ba21b9d5730> 
+
+ Is cuda initialized: True
+
+ CUDA_HOME: /hpcfs/bes/mlgpu/hoseinkk/cuda-11

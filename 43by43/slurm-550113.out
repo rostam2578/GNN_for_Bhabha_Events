@@ -1,0 +1,186 @@
+/var/spool/slurm/spool/job550113/slurm_script: line 22: SBATCH: command not found
+0: gpu022.ihep.ac.cn
+No devices found.
+Allocate GPU cards : 
+
+modinfo:
+filename:       /lib/modules/3.10.0-1127.8.2.el7.x86_64/extra/nvidia.ko.xz
+alias:          char-major-195-*
+version:        450.36.06
+supported:      external
+license:        NVIDIA
+retpoline:      Y
+rhelversion:    7.8
+srcversion:     BB5CB243542347D4EB0C79C
+alias:          pci:v000010DEd*sv*sd*bc03sc02i00*
+alias:          pci:v000010DEd*sv*sd*bc03sc00i00*
+depends:        
+vermagic:       3.10.0-1127.8.2.el7.x86_64 SMP mod_unload modversions 
+parm:           NvSwitchRegDwords:NvSwitch regkey (charp)
+parm:           NvSwitchBlacklist:NvSwitchBlacklist=uuid[,uuid...] (charp)
+parm:           NVreg_ResmanDebugLevel:int
+parm:           NVreg_RmLogonRC:int
+parm:           NVreg_ModifyDeviceFiles:int
+parm:           NVreg_DeviceFileUID:int
+parm:           NVreg_DeviceFileGID:int
+parm:           NVreg_DeviceFileMode:int
+parm:           NVreg_InitializeSystemMemoryAllocations:int
+parm:           NVreg_UsePageAttributeTable:int
+parm:           NVreg_MapRegistersEarly:int
+parm:           NVreg_RegisterForACPIEvents:int
+parm:           NVreg_EnablePCIeGen3:int
+parm:           NVreg_EnableMSI:int
+parm:           NVreg_TCEBypassMode:int
+parm:           NVreg_EnableStreamMemOPs:int
+parm:           NVreg_EnableBacklightHandler:int
+parm:           NVreg_RestrictProfilingToAdminUsers:int
+parm:           NVreg_PreserveVideoMemoryAllocations:int
+parm:           NVreg_DynamicPowerManagement:int
+parm:           NVreg_DynamicPowerManagementVideoMemoryThreshold:int
+parm:           NVreg_EnableUserNUMAManagement:int
+parm:           NVreg_MemoryPoolSize:int
+parm:           NVreg_KMallocHeapMaxSize:int
+parm:           NVreg_VMallocHeapMaxSize:int
+parm:           NVreg_IgnoreMMIOCheck:int
+parm:           NVreg_NvLinkDisable:int
+parm:           NVreg_EnablePCIERelaxedOrderingMode:int
+parm:           NVreg_RegisterPCIDriver:int
+parm:           NVreg_RegistryDwords:charp
+parm:           NVreg_RegistryDwordsPerDevice:charp
+parm:           NVreg_RmMsg:charp
+parm:           NVreg_GpuBlacklist:charp
+parm:           NVreg_TemporaryFilePath:charp
+parm:           NVreg_AssignGpus:charp
+
+nvidia-smi:
+No devices were found
+
+nvcc --version:
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2020 NVIDIA Corporation
+Built on Wed_Jul_22_19:09:09_PDT_2020
+Cuda compilation tools, release 11.0, V11.0.221
+Build cuda_11.0_bu.TC445_37.28845127_0
+
+ torch version: 1.8.0+cu111
+
+ cuda version: 11.1
+
+ is cuda available: False
+
+ CUDNN VERSION: 8005
+
+ Number CUDA Devices: 0
+Traceback (most recent call last):
+  File "./TestCuda.py", line 13, in <module>
+    print('\n', 'CUDA Device Name:',torch.cuda.get_device_name(device=None))
+  File "/hpcfs/bes/mlgpu/hoseinkk/Anaconda3/envs/pytorch3/lib/python3.8/site-packages/torch/cuda/__init__.py", line 276, in get_device_name
+    return get_device_properties(device).name
+  File "/hpcfs/bes/mlgpu/hoseinkk/Anaconda3/envs/pytorch3/lib/python3.8/site-packages/torch/cuda/__init__.py", line 306, in get_device_properties
+    _lazy_init()  # will define _get_device_properties
+  File "/hpcfs/bes/mlgpu/hoseinkk/Anaconda3/envs/pytorch3/lib/python3.8/site-packages/torch/cuda/__init__.py", line 170, in _lazy_init
+    torch._C._cuda_init()
+RuntimeError: No CUDA GPUs are available
+
+real	1m48.478s
+user	0m2.633s
+sys	0m8.573s
+
+
+
+
+ The graph ... 
+
+
+Traceback (most recent call last):
+  File "./GraphDef.py", line 68, in <module>
+    data = data.to(device)
+  File "/hpcfs/bes/mlgpu/hoseinkk/Anaconda3/envs/pytorch3/lib/python3.8/site-packages/torch_geometric/data/data.py", line 340, in to
+    return self.apply(lambda x: x.to(device, **kwargs), *keys)
+  File "/hpcfs/bes/mlgpu/hoseinkk/Anaconda3/envs/pytorch3/lib/python3.8/site-packages/torch_geometric/data/data.py", line 326, in apply
+    self[key] = self.__apply__(item, func)
+  File "/hpcfs/bes/mlgpu/hoseinkk/Anaconda3/envs/pytorch3/lib/python3.8/site-packages/torch_geometric/data/data.py", line 305, in __apply__
+    return func(item)
+  File "/hpcfs/bes/mlgpu/hoseinkk/Anaconda3/envs/pytorch3/lib/python3.8/site-packages/torch_geometric/data/data.py", line 340, in <lambda>
+    return self.apply(lambda x: x.to(device, **kwargs), *keys)
+  File "/hpcfs/bes/mlgpu/hoseinkk/Anaconda3/envs/pytorch3/lib/python3.8/site-packages/torch/cuda/__init__.py", line 170, in _lazy_init
+    torch._C._cuda_init()
+RuntimeError: No CUDA GPUs are available
+
+real	0m18.207s
+user	0m2.501s
+sys	0m1.411s
+/var/spool/slurm/spool/job550113/slurm_script: line 52:  4543 Killed                  python ./DataLoad.py
+
+real	0m8.950s
+user	0m2.499s
+sys	0m4.910s
+
+
+
+
+ The Network ... 
+
+
+
+
+
+
+ The graph ... 
+
+
+Traceback (most recent call last):
+  File "./Model.py", line 2, in <module>
+    from GraphDef import *
+  File "/hpcfs/bes/mlgpu/hoseinkk/MLTracking/bhabha/GNN/GraphDef.py", line 68, in <module>
+    data = data.to(device)
+  File "/hpcfs/bes/mlgpu/hoseinkk/Anaconda3/envs/pytorch3/lib/python3.8/site-packages/torch_geometric/data/data.py", line 340, in to
+    return self.apply(lambda x: x.to(device, **kwargs), *keys)
+  File "/hpcfs/bes/mlgpu/hoseinkk/Anaconda3/envs/pytorch3/lib/python3.8/site-packages/torch_geometric/data/data.py", line 326, in apply
+    self[key] = self.__apply__(item, func)
+  File "/hpcfs/bes/mlgpu/hoseinkk/Anaconda3/envs/pytorch3/lib/python3.8/site-packages/torch_geometric/data/data.py", line 305, in __apply__
+    return func(item)
+  File "/hpcfs/bes/mlgpu/hoseinkk/Anaconda3/envs/pytorch3/lib/python3.8/site-packages/torch_geometric/data/data.py", line 340, in <lambda>
+    return self.apply(lambda x: x.to(device, **kwargs), *keys)
+  File "/hpcfs/bes/mlgpu/hoseinkk/Anaconda3/envs/pytorch3/lib/python3.8/site-packages/torch/cuda/__init__.py", line 170, in _lazy_init
+    torch._C._cuda_init()
+RuntimeError: No CUDA GPUs are available
+
+real	1m3.166s
+user	0m3.161s
+sys	0m8.669s
+
+
+
+
+ Training ... 
+
+
+
+
+
+
+ The graph ... 
+
+
+Traceback (most recent call last):
+  File "./Training.py", line 2, in <module>
+    from GraphDef import *
+  File "/hpcfs/bes/mlgpu/hoseinkk/MLTracking/bhabha/GNN/GraphDef.py", line 68, in <module>
+    data = data.to(device)
+  File "/hpcfs/bes/mlgpu/hoseinkk/Anaconda3/envs/pytorch3/lib/python3.8/site-packages/torch_geometric/data/data.py", line 340, in to
+    return self.apply(lambda x: x.to(device, **kwargs), *keys)
+  File "/hpcfs/bes/mlgpu/hoseinkk/Anaconda3/envs/pytorch3/lib/python3.8/site-packages/torch_geometric/data/data.py", line 326, in apply
+    self[key] = self.__apply__(item, func)
+  File "/hpcfs/bes/mlgpu/hoseinkk/Anaconda3/envs/pytorch3/lib/python3.8/site-packages/torch_geometric/data/data.py", line 305, in __apply__
+    return func(item)
+  File "/hpcfs/bes/mlgpu/hoseinkk/Anaconda3/envs/pytorch3/lib/python3.8/site-packages/torch_geometric/data/data.py", line 340, in <lambda>
+    return self.apply(lambda x: x.to(device, **kwargs), *keys)
+  File "/hpcfs/bes/mlgpu/hoseinkk/Anaconda3/envs/pytorch3/lib/python3.8/site-packages/torch/cuda/__init__.py", line 170, in _lazy_init
+    torch._C._cuda_init()
+RuntimeError: No CUDA GPUs are available
+
+real	0m3.138s
+user	0m1.693s
+sys	0m0.737s
+slurmstepd: error: Detected 1 oom-kill event(s) in step 550113.batch cgroup. Some of your processes may have been killed by the cgroup out-of-memory handler.

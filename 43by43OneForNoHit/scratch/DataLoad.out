@@ -1,0 +1,159 @@
+0: gpu014.ihep.ac.cn
+GPU 0: Tesla V100-SXM2-32GB (UUID: GPU-3bb20527-137f-59d4-1457-536e678fc09f)
+GPU 1: Tesla V100-SXM2-32GB (UUID: GPU-c6183abd-385d-c650-1e11-7c6df3667aec)
+GPU 2: Tesla V100-SXM2-32GB (UUID: GPU-79bd3366-4c75-1e2c-4761-4166731316ba)
+Allocate GPU cards : 0,1,2
+
+modinfo:
+filename:       /lib/modules/3.10.0-1127.8.2.el7.x86_64/extra/nvidia.ko.xz
+alias:          char-major-195-*
+version:        450.36.06
+supported:      external
+license:        NVIDIA
+retpoline:      Y
+rhelversion:    7.8
+srcversion:     BB5CB243542347D4EB0C79C
+alias:          pci:v000010DEd*sv*sd*bc03sc02i00*
+alias:          pci:v000010DEd*sv*sd*bc03sc00i00*
+depends:        
+vermagic:       3.10.0-1127.8.2.el7.x86_64 SMP mod_unload modversions 
+parm:           NvSwitchRegDwords:NvSwitch regkey (charp)
+parm:           NvSwitchBlacklist:NvSwitchBlacklist=uuid[,uuid...] (charp)
+parm:           NVreg_ResmanDebugLevel:int
+parm:           NVreg_RmLogonRC:int
+parm:           NVreg_ModifyDeviceFiles:int
+parm:           NVreg_DeviceFileUID:int
+parm:           NVreg_DeviceFileGID:int
+parm:           NVreg_DeviceFileMode:int
+parm:           NVreg_InitializeSystemMemoryAllocations:int
+parm:           NVreg_UsePageAttributeTable:int
+parm:           NVreg_MapRegistersEarly:int
+parm:           NVreg_RegisterForACPIEvents:int
+parm:           NVreg_EnablePCIeGen3:int
+parm:           NVreg_EnableMSI:int
+parm:           NVreg_TCEBypassMode:int
+parm:           NVreg_EnableStreamMemOPs:int
+parm:           NVreg_EnableBacklightHandler:int
+parm:           NVreg_RestrictProfilingToAdminUsers:int
+parm:           NVreg_PreserveVideoMemoryAllocations:int
+parm:           NVreg_DynamicPowerManagement:int
+parm:           NVreg_DynamicPowerManagementVideoMemoryThreshold:int
+parm:           NVreg_EnableUserNUMAManagement:int
+parm:           NVreg_MemoryPoolSize:int
+parm:           NVreg_KMallocHeapMaxSize:int
+parm:           NVreg_VMallocHeapMaxSize:int
+parm:           NVreg_IgnoreMMIOCheck:int
+parm:           NVreg_NvLinkDisable:int
+parm:           NVreg_EnablePCIERelaxedOrderingMode:int
+parm:           NVreg_RegisterPCIDriver:int
+parm:           NVreg_RegistryDwords:charp
+parm:           NVreg_RegistryDwordsPerDevice:charp
+parm:           NVreg_RmMsg:charp
+parm:           NVreg_GpuBlacklist:charp
+parm:           NVreg_TemporaryFilePath:charp
+parm:           NVreg_AssignGpus:charp
+
+nvidia-smi:
+Thu Jun  3 20:24:28 2021       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 450.36.06    Driver Version: 450.36.06    CUDA Version: 11.0     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  Tesla V100-SXM2...  On   | 00000000:1C:00.0 Off |                    0 |
+| N/A   42C    P0    42W / 300W |      0MiB / 32510MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   1  Tesla V100-SXM2...  On   | 00000000:1D:00.0 Off |                    0 |
+| N/A   36C    P0    43W / 300W |      0MiB / 32510MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   2  Tesla V100-SXM2...  On   | 00000000:1E:00.0 Off |                    0 |
+| N/A   42C    P0    43W / 300W |      0MiB / 32510MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+
+nvcc --version:
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2020 NVIDIA Corporation
+Built on Wed_Jul_22_19:09:09_PDT_2020
+Cuda compilation tools, release 11.0, V11.0.221
+Build cuda_11.0_bu.TC445_37.28845127_0
+
+ torch version: 1.8.0+cu111
+
+ cuda version: 11.1
+
+ is cuda available: True
+
+ CUDNN VERSION: 8005
+
+ Number CUDA Devices: 3
+
+ CUDA Device Name: Tesla V100-SXM2-32GB
+
+ CUDA Device Total Memory [GB]: 34.089730048
+
+ Device capability: (7, 0) 
+
+ Cuda deviice: <torch.cuda.device object at 0x2b18980e07c0> 
+
+ Is cuda initialized: True
+
+ CUDA_HOME: /hpcfs/bes/mlgpu/hoseinkk/cuda-11
+
+real	1m8.906s
+user	0m2.960s
+sys	0m9.627s
+
+
+
+
+ The graph ... 
+
+
+graph forming time: 0:00:13.055602
+Number of nodes: 1849
+Number of edges: 14534
+Average node degree: 7.86
+Contains isolated nodes: False
+Contains self-loops: False
+Is undirected: True
+contains self/isolated loop: False, False
+is coalesced: False
+number of features, per nodes, per edges: (1, 1, 0)
+x: tensor([[0.0000e+00],
+        [1.0000e+00],
+        [2.0000e+00],
+        ...,
+        [1.8460e+03],
+        [1.8470e+03],
+        [1.8480e+03]]) 
+ edge_index: tensor([[1605, 1687, 1365,  ..., 1602, 1729,  308],
+        [1649, 1688, 1408,  ..., 1644, 1685,  265]])
+
+real	0m36.255s
+user	0m5.694s
+sys	0m5.821s
+
+
+
+
+
+ Loading data ... 
+
+
+
+real	0m24.993s
+user	0m6.323s
+sys	0m13.374s
