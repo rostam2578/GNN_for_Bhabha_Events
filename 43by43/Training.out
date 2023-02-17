@@ -1,0 +1,647 @@
+0: gpu016.ihep.ac.cn
+GPU 0: Tesla V100-SXM2-32GB (UUID: GPU-a8e85e74-70a8-19ce-09ec-dad30d95ecbe)
+GPU 1: Tesla V100-SXM2-32GB (UUID: GPU-adc0bb57-5f8a-ba9d-04e2-dbaa9f7c20f1)
+GPU 2: Tesla V100-SXM2-32GB (UUID: GPU-581f8eb6-0f10-0567-a415-a8f7c72e3a95)
+GPU 3: Tesla V100-SXM2-32GB (UUID: GPU-d9a59e1e-438e-5d0e-d726-afe9140917f2)
+GPU 4: Tesla V100-SXM2-32GB (UUID: GPU-2135d612-642f-4ad0-ea96-14ef624f2286)
+Allocate GPU cards : 0,1,2,3,4
+
+modinfo:
+filename:       /lib/modules/3.10.0-1127.8.2.el7.x86_64/extra/nvidia.ko.xz
+alias:          char-major-195-*
+version:        450.36.06
+supported:      external
+license:        NVIDIA
+retpoline:      Y
+rhelversion:    7.8
+srcversion:     BB5CB243542347D4EB0C79C
+alias:          pci:v000010DEd*sv*sd*bc03sc02i00*
+alias:          pci:v000010DEd*sv*sd*bc03sc00i00*
+depends:        
+vermagic:       3.10.0-1127.8.2.el7.x86_64 SMP mod_unload modversions 
+parm:           NvSwitchRegDwords:NvSwitch regkey (charp)
+parm:           NvSwitchBlacklist:NvSwitchBlacklist=uuid[,uuid...] (charp)
+parm:           NVreg_ResmanDebugLevel:int
+parm:           NVreg_RmLogonRC:int
+parm:           NVreg_ModifyDeviceFiles:int
+parm:           NVreg_DeviceFileUID:int
+parm:           NVreg_DeviceFileGID:int
+parm:           NVreg_DeviceFileMode:int
+parm:           NVreg_InitializeSystemMemoryAllocations:int
+parm:           NVreg_UsePageAttributeTable:int
+parm:           NVreg_MapRegistersEarly:int
+parm:           NVreg_RegisterForACPIEvents:int
+parm:           NVreg_EnablePCIeGen3:int
+parm:           NVreg_EnableMSI:int
+parm:           NVreg_TCEBypassMode:int
+parm:           NVreg_EnableStreamMemOPs:int
+parm:           NVreg_EnableBacklightHandler:int
+parm:           NVreg_RestrictProfilingToAdminUsers:int
+parm:           NVreg_PreserveVideoMemoryAllocations:int
+parm:           NVreg_DynamicPowerManagement:int
+parm:           NVreg_DynamicPowerManagementVideoMemoryThreshold:int
+parm:           NVreg_EnableUserNUMAManagement:int
+parm:           NVreg_MemoryPoolSize:int
+parm:           NVreg_KMallocHeapMaxSize:int
+parm:           NVreg_VMallocHeapMaxSize:int
+parm:           NVreg_IgnoreMMIOCheck:int
+parm:           NVreg_NvLinkDisable:int
+parm:           NVreg_EnablePCIERelaxedOrderingMode:int
+parm:           NVreg_RegisterPCIDriver:int
+parm:           NVreg_RegistryDwords:charp
+parm:           NVreg_RegistryDwordsPerDevice:charp
+parm:           NVreg_RmMsg:charp
+parm:           NVreg_GpuBlacklist:charp
+parm:           NVreg_TemporaryFilePath:charp
+parm:           NVreg_AssignGpus:charp
+
+nvidia-smi:
+Wed May 26 05:45:20 2021       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 450.36.06    Driver Version: 450.36.06    CUDA Version: 11.0     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  Tesla V100-SXM2...  On   | 00000000:1C:00.0 Off |                    0 |
+| N/A   38C    P0    42W / 300W |      0MiB / 32510MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   1  Tesla V100-SXM2...  On   | 00000000:1D:00.0 Off |                    0 |
+| N/A   35C    P0    43W / 300W |      0MiB / 32510MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   2  Tesla V100-SXM2...  On   | 00000000:1E:00.0 Off |                    0 |
+| N/A   38C    P0    43W / 300W |      0MiB / 32510MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   3  Tesla V100-SXM2...  On   | 00000000:1F:00.0 Off |                    0 |
+| N/A   36C    P0    44W / 300W |      0MiB / 32510MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   4  Tesla V100-SXM2...  On   | 00000000:B3:00.0 Off |                    0 |
+| N/A   35C    P0    44W / 300W |      0MiB / 32510MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+
+nvcc --version:
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2020 NVIDIA Corporation
+Built on Wed_Jul_22_19:09:09_PDT_2020
+Cuda compilation tools, release 11.0, V11.0.221
+Build cuda_11.0_bu.TC445_37.28845127_0
+
+ torch version: 1.8.0+cu111
+
+ cuda version: 11.1
+
+ is cuda available: True
+
+ CUDNN VERSION: 8005
+
+ Number CUDA Devices: 5
+
+ CUDA Device Name: Tesla V100-SXM2-32GB
+
+ CUDA Device Total Memory [GB]: 34.089730048
+
+ Device capability: (7, 0) 
+
+ Cuda deviice: <torch.cuda.device object at 0x2abebd8057c0> 
+
+ Is cuda initialized: True
+
+ CUDA_HOME: /hpcfs/bes/mlgpu/hoseinkk/cuda-11
+
+real	0m7.037s
+user	0m2.017s
+sys	0m1.612s
+
+
+
+
+ The graph ... 
+
+
+graph forming time: 0:00:04.003287
+Number of nodes: 1849
+Number of edges: 14534
+Average node degree: 7.86
+Contains isolated nodes: False
+Contains self-loops: False
+Is undirected: True
+contains self/isolated loop: False, False
+is coalesced: False
+number of features, per nodes, per edges: (1, 1, 0)
+x: tensor([[0.0000e+00],
+        [1.0000e+00],
+        [2.0000e+00],
+        ...,
+        [1.8460e+03],
+        [1.8470e+03],
+        [1.8480e+03]]) 
+ edge_index: tensor([[1605, 1687, 1365,  ..., 1602, 1729,  308],
+        [1649, 1688, 1408,  ..., 1644, 1685,  265]])
+
+real	0m7.947s
+user	0m4.545s
+sys	0m2.635s
+
+
+
+
+
+ Loading data ... 
+
+
+
+real	0m9.101s
+user	0m5.084s
+sys	0m3.693s
+Matplotlib created a temporary config/cache directory at /tmp/matplotlib-i8yybcrj because the default path (/afs/ihep.ac.cn/users/h/hoseinkk/.config/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+
+
+
+
+ The Network ... 
+
+
+
+
+
+
+ The graph ... 
+
+
+graph forming time: 0:00:04.001319
+Number of nodes: 1849
+Number of edges: 14534
+Average node degree: 7.86
+Contains isolated nodes: False
+Contains self-loops: False
+Is undirected: True
+contains self/isolated loop: False, False
+is coalesced: False
+number of features, per nodes, per edges: (1, 1, 0)
+x: tensor([[0.0000e+00],
+        [1.0000e+00],
+        [2.0000e+00],
+        ...,
+        [1.8460e+03],
+        [1.8470e+03],
+        [1.8480e+03]]) 
+ edge_index: tensor([[1605, 1687, 1365,  ..., 1602, 1729,  308],
+        [1649, 1688, 1408,  ..., 1644, 1685,  265]])
+
+
+
+
+
+ Loading data ... 
+
+
+Net(
+  (conv1): GCNConv(1, 256)
+  (conv2): GCNConv(256, 256)
+  (conv3): GCNConv(256, 128)
+  (conv4): GCNConv(128, 64)
+  (conv5): GCNConv(64, 32)
+  (conv6): GCNConv(32, 1)
+)
+
+Passing two sample data from the network before training 
+result1: tensor([[[0.5000],
+         [0.5001],
+         [0.5003],
+         ...,
+         [0.5000],
+         [0.5000],
+         [0.5000]],
+
+        [[0.5000],
+         [0.5000],
+         [0.5000],
+         ...,
+         [0.5000],
+         [0.5000],
+         [0.5000]]], device='cuda:0', dtype=torch.float64,
+       grad_fn=<SigmoidBackward>) 
+data1: Data(edge_index=[2, 14534], x=[2, 1849, 1]) torch.Size([2, 1849, 1]) 
+x.shape: torch.Size([1849, 1])
+tensor([[0.5000, 0.5001, 0.5003,  ..., 0.5001, 0.5000, 0.5000],
+        [0.5001, 0.5002, 0.5004,  ..., 0.5001, 0.5000, 0.5000],
+        [0.5001, 0.5002, 0.5004,  ..., 0.5001, 0.5000, 0.5000],
+        ...,
+        [0.5000, 0.5000, 0.5000,  ..., 0.5000, 0.5000, 0.5000],
+        [0.5000, 0.5000, 0.5000,  ..., 0.5000, 0.5000, 0.5000],
+        [0.5000, 0.5000, 0.5000,  ..., 0.5000, 0.5000, 0.5000]],
+       device='cuda:0', dtype=torch.float64, grad_fn=<ViewBackward>)
+
+real	0m14.666s
+user	0m8.593s
+sys	0m4.663s
+Matplotlib created a temporary config/cache directory at /tmp/matplotlib-ojqd25kj because the default path (/afs/ihep.ac.cn/users/h/hoseinkk/.config/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+
+
+
+
+ Training ... 
+
+
+
+
+
+
+ The graph ... 
+
+
+graph forming time: 0:00:03.998111
+Number of nodes: 1849
+Number of edges: 14534
+Average node degree: 7.86
+Contains isolated nodes: False
+Contains self-loops: False
+Is undirected: True
+contains self/isolated loop: False, False
+is coalesced: False
+number of features, per nodes, per edges: (1, 1, 0)
+x: tensor([[0.0000e+00],
+        [1.0000e+00],
+        [2.0000e+00],
+        ...,
+        [1.8460e+03],
+        [1.8470e+03],
+        [1.8480e+03]]) 
+ edge_index: tensor([[1605, 1687, 1365,  ..., 1602, 1729,  308],
+        [1649, 1688, 1408,  ..., 1644, 1685,  265]])
+
+
+
+
+
+ Loading data ... 
+
+
+
+
+
+
+ The Network ... 
+
+
+Net(
+  (conv1): GCNConv(1, 256)
+  (conv2): GCNConv(256, 256)
+  (conv3): GCNConv(256, 128)
+  (conv4): GCNConv(128, 64)
+  (conv5): GCNConv(64, 32)
+  (conv6): GCNConv(32, 1)
+)
+
+Passing two sample data from the network before training 
+result1: tensor([[[0.5000],
+         [0.5001],
+         [0.5002],
+         ...,
+         [0.5000],
+         [0.5000],
+         [0.5000]],
+
+        [[0.5000],
+         [0.5000],
+         [0.5000],
+         ...,
+         [0.5000],
+         [0.5000],
+         [0.5000]]], device='cuda:0', dtype=torch.float64,
+       grad_fn=<SigmoidBackward>) 
+data1: Data(edge_index=[2, 14534], x=[2, 1849, 1]) torch.Size([2, 1849, 1]) 
+x.shape: torch.Size([1849, 1])
+tensor([[0.5000, 0.5001, 0.5002,  ..., 0.5001, 0.5000, 0.5000],
+        [0.5000, 0.5001, 0.5002,  ..., 0.5001, 0.5000, 0.5000],
+        [0.5001, 0.5001, 0.5003,  ..., 0.5001, 0.5000, 0.5000],
+        ...,
+        [0.5000, 0.5000, 0.5000,  ..., 0.5000, 0.5000, 0.5000],
+        [0.5000, 0.5000, 0.5000,  ..., 0.5000, 0.5000, 0.5000],
+        [0.5000, 0.5000, 0.5000,  ..., 0.5000, 0.5000, 0.5000]],
+       device='cuda:0', dtype=torch.float64, grad_fn=<ViewBackward>)
+epoch: 0 batch 0.0 event: 0 loss: tensor(0.6935, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 0 batch 1.0 event: 2500 loss: tensor(0.1108, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 0 batch 2.0 event: 5000 loss: tensor(0.0910, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 0 batch 3.0 event: 7500 loss: tensor(0.0824, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 0 batch 4.0 event: 10000 loss: tensor(0.0827, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 0 batch 5.0 event: 12500 loss: tensor(0.0751, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 0 batch 6.0 event: 15000 loss: tensor(0.0779, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 0 batch 7.0 event: 17500 loss: tensor(0.0765, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 0 batch 8.0 event: 20000 loss: tensor(0.0791, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 0 batch 9.0 event: 22500 loss: tensor(0.0759, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 0 batch 10.0 event: 25000 loss: tensor(0.0882, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 0 batch 11.0 event: 27500 loss: tensor(0.0853, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 0 batch 12.0 event: 30000 loss: tensor(0.0823, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 0 batch 13.0 event: 32500 loss: tensor(0.0785, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 0 batch 14.0 event: 35000 loss: tensor(0.0799, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 0 batch 15.0 event: 37500 loss: tensor(0.0808, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 0 batch 16.0 event: 40000 loss: tensor(0.0769, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 0 batch 17.0 event: 42500 loss: tensor(0.0771, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 0 batch 18.0 event: 45000 loss: tensor(0.0759, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 0 batch 19.0 event: 47500 loss: tensor(0.0698, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 0 batch 20.0 event: 50000 loss: tensor(0.0815, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 0 batch 21.0 event: 52500 loss: tensor(0.0825, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 0 batch 22.0 event: 55000 loss: tensor(0.0807, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 0 batch 23.0 event: 57500 loss: tensor(0.0771, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 0 batch 24.0 event: 60000 loss: tensor(0.0794, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 0 batch 25.0 event: 62500 loss: tensor(0.0721, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 0 batch 26.0 event: 65000 loss: tensor(0.0729, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 0 batch 27.0 event: 67500 loss: tensor(0.0730, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 0 batch 28.0 event: 70000 loss: tensor(0.0774, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+time passed so far: 0:02:25.391257
+epoch: 0 mean loss: tensor(0.0839, device='cuda:0', dtype=torch.float64, grad_fn=<DivBackward0>)
+=> saveing checkpoint at epoch 0
+checkpoint is saved at: /hpcfs/bes/mlgpu/hoseinkk/MLTracking/bhabha/bhabha-files/bhabaGCN04
+epoch: 1 batch 0.0 event: 0 loss: tensor(0.0906, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 1 batch 1.0 event: 2500 loss: tensor(0.0837, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 1 batch 2.0 event: 5000 loss: tensor(0.0832, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 1 batch 3.0 event: 7500 loss: tensor(0.0795, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 1 batch 4.0 event: 10000 loss: tensor(0.0802, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 1 batch 5.0 event: 12500 loss: tensor(0.0729, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 1 batch 6.0 event: 15000 loss: tensor(0.0743, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 1 batch 7.0 event: 17500 loss: tensor(0.0753, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 1 batch 8.0 event: 20000 loss: tensor(0.0775, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 1 batch 9.0 event: 22500 loss: tensor(0.0745, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 1 batch 10.0 event: 25000 loss: tensor(0.0860, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 1 batch 11.0 event: 27500 loss: tensor(0.0844, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 1 batch 12.0 event: 30000 loss: tensor(0.0810, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 1 batch 13.0 event: 32500 loss: tensor(0.0788, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 1 batch 14.0 event: 35000 loss: tensor(0.0797, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 1 batch 15.0 event: 37500 loss: tensor(0.0805, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 1 batch 16.0 event: 40000 loss: tensor(0.0757, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 1 batch 17.0 event: 42500 loss: tensor(0.0764, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 1 batch 18.0 event: 45000 loss: tensor(0.0747, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 1 batch 19.0 event: 47500 loss: tensor(0.0695, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 1 batch 20.0 event: 50000 loss: tensor(0.0803, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 1 batch 21.0 event: 52500 loss: tensor(0.0818, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 1 batch 22.0 event: 55000 loss: tensor(0.0803, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 1 batch 23.0 event: 57500 loss: tensor(0.0778, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 1 batch 24.0 event: 60000 loss: tensor(0.0789, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 1 batch 25.0 event: 62500 loss: tensor(0.0718, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 1 batch 26.0 event: 65000 loss: tensor(0.0731, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 1 batch 27.0 event: 67500 loss: tensor(0.0729, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 1 batch 28.0 event: 70000 loss: tensor(0.0782, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+time passed so far: 0:04:50.834781
+epoch: 1 mean loss: tensor(0.0783, device='cuda:0', dtype=torch.float64, grad_fn=<DivBackward0>)
+epoch: 2 batch 0.0 event: 0 loss: tensor(0.0817, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 2 batch 1.0 event: 2500 loss: tensor(0.0840, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 2 batch 2.0 event: 5000 loss: tensor(0.0832, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 2 batch 3.0 event: 7500 loss: tensor(0.0790, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 2 batch 4.0 event: 10000 loss: tensor(0.0798, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 2 batch 5.0 event: 12500 loss: tensor(0.0728, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 2 batch 6.0 event: 15000 loss: tensor(0.0738, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 2 batch 7.0 event: 17500 loss: tensor(0.0749, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 2 batch 8.0 event: 20000 loss: tensor(0.0784, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 2 batch 9.0 event: 22500 loss: tensor(0.0750, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 2 batch 10.0 event: 25000 loss: tensor(0.0863, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 2 batch 11.0 event: 27500 loss: tensor(0.0842, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 2 batch 12.0 event: 30000 loss: tensor(0.0811, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 2 batch 13.0 event: 32500 loss: tensor(0.0788, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 2 batch 14.0 event: 35000 loss: tensor(0.0796, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 2 batch 15.0 event: 37500 loss: tensor(0.0807, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 2 batch 16.0 event: 40000 loss: tensor(0.0760, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 2 batch 17.0 event: 42500 loss: tensor(0.0761, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 2 batch 18.0 event: 45000 loss: tensor(0.0758, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 2 batch 19.0 event: 47500 loss: tensor(0.0714, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 2 batch 20.0 event: 50000 loss: tensor(0.0816, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 2 batch 21.0 event: 52500 loss: tensor(0.0818, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 2 batch 22.0 event: 55000 loss: tensor(0.0801, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 2 batch 23.0 event: 57500 loss: tensor(0.0771, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 2 batch 24.0 event: 60000 loss: tensor(0.0786, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 2 batch 25.0 event: 62500 loss: tensor(0.0715, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 2 batch 26.0 event: 65000 loss: tensor(0.0724, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 2 batch 27.0 event: 67500 loss: tensor(0.0730, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 2 batch 28.0 event: 70000 loss: tensor(0.0765, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+time passed so far: 0:07:16.274956
+epoch: 2 mean loss: tensor(0.0782, device='cuda:0', dtype=torch.float64, grad_fn=<DivBackward0>)
+epoch: 3 batch 0.0 event: 0 loss: tensor(0.0839, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 3 batch 1.0 event: 2500 loss: tensor(0.0840, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 3 batch 2.0 event: 5000 loss: tensor(0.0831, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 3 batch 3.0 event: 7500 loss: tensor(0.0796, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 3 batch 4.0 event: 10000 loss: tensor(0.0803, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 3 batch 5.0 event: 12500 loss: tensor(0.0728, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 3 batch 6.0 event: 15000 loss: tensor(0.0738, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 3 batch 7.0 event: 17500 loss: tensor(0.0750, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 3 batch 8.0 event: 20000 loss: tensor(0.0783, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 3 batch 9.0 event: 22500 loss: tensor(0.0745, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 3 batch 10.0 event: 25000 loss: tensor(0.0880, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 3 batch 11.0 event: 27500 loss: tensor(0.0841, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 3 batch 12.0 event: 30000 loss: tensor(0.0818, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 3 batch 13.0 event: 32500 loss: tensor(0.0783, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 3 batch 14.0 event: 35000 loss: tensor(0.0797, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 3 batch 15.0 event: 37500 loss: tensor(0.0804, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 3 batch 16.0 event: 40000 loss: tensor(0.0758, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 3 batch 17.0 event: 42500 loss: tensor(0.0761, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 3 batch 18.0 event: 45000 loss: tensor(0.0761, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 3 batch 19.0 event: 47500 loss: tensor(0.0700, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 3 batch 20.0 event: 50000 loss: tensor(0.0801, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 3 batch 21.0 event: 52500 loss: tensor(0.0818, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 3 batch 22.0 event: 55000 loss: tensor(0.0801, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 3 batch 23.0 event: 57500 loss: tensor(0.0770, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 3 batch 24.0 event: 60000 loss: tensor(0.0785, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 3 batch 25.0 event: 62500 loss: tensor(0.0714, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 3 batch 26.0 event: 65000 loss: tensor(0.0723, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 3 batch 27.0 event: 67500 loss: tensor(0.0727, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 3 batch 28.0 event: 70000 loss: tensor(0.0774, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+time passed so far: 0:09:41.709413
+epoch: 3 mean loss: tensor(0.0781, device='cuda:0', dtype=torch.float64, grad_fn=<DivBackward0>)
+=> saveing checkpoint at epoch 3
+checkpoint is saved at: /hpcfs/bes/mlgpu/hoseinkk/MLTracking/bhabha/bhabha-files/bhabaGCN04
+epoch: 4 batch 0.0 event: 0 loss: tensor(0.0828, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 4 batch 1.0 event: 2500 loss: tensor(0.0842, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 4 batch 2.0 event: 5000 loss: tensor(0.0833, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 4 batch 3.0 event: 7500 loss: tensor(0.0795, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 4 batch 4.0 event: 10000 loss: tensor(0.0799, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 4 batch 5.0 event: 12500 loss: tensor(0.0727, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 4 batch 6.0 event: 15000 loss: tensor(0.0737, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 4 batch 7.0 event: 17500 loss: tensor(0.0749, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 4 batch 8.0 event: 20000 loss: tensor(0.0788, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 4 batch 9.0 event: 22500 loss: tensor(0.0747, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 4 batch 10.0 event: 25000 loss: tensor(0.0868, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 4 batch 11.0 event: 27500 loss: tensor(0.0841, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 4 batch 12.0 event: 30000 loss: tensor(0.0820, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 4 batch 13.0 event: 32500 loss: tensor(0.0784, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 4 batch 14.0 event: 35000 loss: tensor(0.0799, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 4 batch 15.0 event: 37500 loss: tensor(0.0803, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 4 batch 16.0 event: 40000 loss: tensor(0.0761, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 4 batch 17.0 event: 42500 loss: tensor(0.0761, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 4 batch 18.0 event: 45000 loss: tensor(0.0757, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 4 batch 19.0 event: 47500 loss: tensor(0.0699, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 4 batch 20.0 event: 50000 loss: tensor(0.0799, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 4 batch 21.0 event: 52500 loss: tensor(0.0817, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 4 batch 22.0 event: 55000 loss: tensor(0.0802, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 4 batch 23.0 event: 57500 loss: tensor(0.0766, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 4 batch 24.0 event: 60000 loss: tensor(0.0785, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 4 batch 25.0 event: 62500 loss: tensor(0.0711, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 4 batch 26.0 event: 65000 loss: tensor(0.0725, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 4 batch 27.0 event: 67500 loss: tensor(0.0728, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+epoch: 4 batch 28.0 event: 70000 loss: tensor(0.0762, device='cuda:0', dtype=torch.float64,
+       grad_fn=<BinaryCrossEntropyBackward>)
+time passed so far: 0:12:07.153262
+epoch: 4 mean loss: tensor(0.0780, device='cuda:0', dtype=torch.float64, grad_fn=<DivBackward0>)
+=> saveing checkpoint at epoch 4
+checkpoint is saved at: /hpcfs/bes/mlgpu/hoseinkk/MLTracking/bhabha/bhabha-files/bhabaGCN04
+0:12:07.173913
+
+real	12m21.720s
+user	8m57.594s
+sys	3m20.993s
